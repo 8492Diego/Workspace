@@ -1,0 +1,131 @@
+class System:
+    Formas
+
+
+	# construtor
+	def System():
+			Formas = []
+		
+	# funções
+	def registrar_ponto(x,y):
+			ponto = Ponto(x,y)
+			Formas.append(ponto)
+
+	def registrar_reta(x1,y1,x2,y2)
+			reta = Reta(x1,y1,x2,y2)
+			Formas.append(reta)
+		
+	def registrar_triangulo(x1,y1,x2,y2,x3,y3)
+	    triangulo = Triangulo(x1,y1,x2,y2,x3,y3)
+	    Formas.append(triangulo)
+
+	def registrar_circunferencia(r,x1,y1)
+  		circunferencia = Circunferencia(r,x1,y2)
+    	Formas.append(circunferencia)
+      
+    def contem(ponto):
+    	for f in Formas:
+            if f.contem(ponto)
+            return true
+        return false
+
+class Ponto:
+	x
+	y
+
+	# construtor
+	def Ponto(x,y):
+		this.x = x
+		this.y = y
+  
+    #função
+ 	def scalarMultiplication(s):
+    	x = x*s
+    	y = y*s
+    
+	def contem(ponto):
+    	if x = ponto.x and y = ponto.y:
+      		print("Estes pontos são iguais")
+      		return true
+    
+class Reta:
+	Point1
+	Point2
+	
+	# construtor
+	def Reta(x1,y1,x2,y2):
+		Point1 = Ponto(x1,y1)
+		Point2 = Ponto(x2,y2)
+		
+	def Reta(ponto1,ponto2):
+	    Point1 = ponto1
+	    Point2 = ponto2
+	
+	#funções
+	def comprimento():
+	    d = math.sqrt((x1-x2)**2 + (y1-y2)**2)
+	    return d
+	
+	def slope():
+	    s = (y1-y2)/(x1-x2)
+	    return s
+
+  	def contem(ponto):
+	    reta = Reta(ponto,Point1)
+      	if reta.slope == this.slope:
+		    print("Esse ponto pertence à reta")
+		    return true
+      
+class triangulo:
+    Point1
+    Point2
+    Point3
+    
+    Reta1
+    Reta2
+    Reta3
+    
+    #construtor
+    def Triangulo(x1,y1,x2,y2,x3,y3):
+        Point1 = Ponto(x1,y1)
+        Point2 = Ponto(x2,y2)
+        Point3 = Ponto(x3,y3)
+        
+        Reta1 = Reta(Point1,Point2)
+        Reta2 = Reta(Point2,Point3)
+        Reta3 = Reta(Point3,Point1)
+        if Reta1.comprimento() <= Reta2.comprimento() + Reta3.comprimento() or
+           Reta2.comprimento() <= Reta1.comprimento() + Reta3.comprimento() or
+           Reta3.comprimento() <= Reta2.comprimento() + Reta1.comprimento():
+            print("Entrada inválida")
+            return NULL
+ 
+class Circunferencia:
+	ponto
+  	raio
+  
+	#construtor
+  	def Circunferencia(r,x1,y2)
+  		ponto = Ponto(x1,y1)
+    		raio = r
+      
+  #funções
+	def contem (ponto)
+  		reta = Reta(this.ponto,ponto)
+    		if reta.comprimento() < raio:
+        		print("Este ponto está dentro da circunferencia")
+       			return true
+      		elif reta.comprimento() = raio:
+        		print("Este ponto pertence à circunferência")
+        		return true
+  
+
+Main():
+      Workspace = system( )
+      Workspace.registrar_ponto(1,0)
+      Workspace.registrar_reta(2,0,3,5)
+      Workspace.registrar_tirangulo(0,0,1.5,3,0,3)
+      Workspace.registrar_circunferencia(2,0,0)
+      
+      if Workspace.contem(3,2):
+        print("Contém.")
